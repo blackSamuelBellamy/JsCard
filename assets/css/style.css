@@ -20,7 +20,7 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  height: 500px;
+  height: 550px;
   background: rgba(0, 0, 0, .7);
   width: 20em;
   border-radius: 20px;
@@ -43,8 +43,8 @@ form {
 
 .img {
   width: 15em;
-  height: 150px;
-  margin-bottom: 17%;
+  height: 200px;
+  margin-bottom: 19%;
 }
 
 img {

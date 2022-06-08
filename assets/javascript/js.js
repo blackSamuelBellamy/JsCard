@@ -12,7 +12,7 @@ const negro = document.querySelector('.negro');
 const amarillo = document.querySelector('.amarillo');
 const verde = document.querySelector('.verde');
 const ul = document.querySelector('ul');
-let color;
+const li = document.querySelectorAll('li');
 
 next.addEventListener('click', () => {
     number.textContent ++;
@@ -25,8 +25,8 @@ previous.addEventListener('click', () => {
         return;
     } else {
         number.textContent --;
-        let sum = (number.textContent * 790990).toLocaleString('en-US');
-        price.textContent = `Precio: $${sum}`;
+        let rest = (number.textContent * 790990).toLocaleString('en-US');
+        price.textContent = `Precio: $${rest}`;
     }
    
 });
@@ -49,7 +49,32 @@ ul.addEventListener('click', () =>{
 
 })
 
-  
+const red = () => {
+    let colorRojo = 'Escogiste Rojo';
+    colors.textContent = colorRojo;   
+};
+
+const blue = () => {
+    let colorAzul = 'Escogiste Azul';
+    colors.textContent = colorAzul;   
+};
+
+const black = () => {
+    let colorNegro = 'Escogiste Negro';
+    colors.textContent = colorNegro;   
+};
+
+const yellow = () => {
+    let colorAmarillo= 'Escogiste Amarillo';
+    colors.textContent = colorAmarillo;   
+};
+
+const green = () => {
+    let colorVerde = 'Escogiste Verde';
+    colors.textContent = colorVerde;   
+};
+
+
 
 
 

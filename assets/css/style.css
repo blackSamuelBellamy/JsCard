@@ -35,7 +35,7 @@
   top: 50%;
   transform: translateX(-50%) translateY(-50%) rotateY(90deg);
   height: 550px;
-  background: rgba(255, 255, 255, .7);
+  background: rgba(0, 0, 0, .7);
   width: 20em;
   border-radius: 20px;
   opacity: 1;
@@ -47,7 +47,8 @@
   justify-content: flex-start;
   gap: 7%;
   overflow: hidden;
-  box-shadow: 0 0 5px #ccc, 4px 4px 30px #ccc;
+  box-shadow: 0 0 5px #ccc inset, 0px 0px 25px #ccc, 0 0 50px #ccc, 0 0 200px #ccc;
+  color: #FFF;
   
   
 }
@@ -55,6 +56,7 @@
 .descuento span {
   position: absolute;
   display: block;
+  border-radius: 20%;
   
 }
 
@@ -165,24 +167,31 @@
 .descuento .escogido {
   display: flex;
   justify-content: center;
-  align-items: center;  
-  font-size: 1.4em;
-  width: 180px;
-  height: 60px;
-  border-radius: 50px;
-  text-align: center;
-  font-weight: 700;
+  align-items: center;
+  color: #FFF;
   letter-spacing: 2px;
-  font-family: monospace;
-  border: 3px double #FFF;
+  font-size: 16px;
+  text-align: center;
+  height: 40px;
+  opacity: .6;
+  margin-top: 3%;
+  border: 3px solid #FFF;
+  width: 13em;
+}
+
+.descuento p:nth-of-type(2) {
+  margin-top: 7%;
 }
 
 
 
 
 .card:hover {
-  box-shadow: 0px 0px 35px #FFF, 4px 4px 50px rgb(224, 40, 40) inset ;
-  cursor: pointer;
+  box-shadow: 0 0 5px #03e9f4 inset,
+  0 0 25px #03e9f4,
+  0 0 50px #03e9f4,
+  0 0 200px #03e9f4 inset;
+
 }
 
 form {
@@ -223,16 +232,19 @@ form, button {
   border-radius: 45px;
   border: 2px solid rgba(255, 255, 255, .5);
   transition: .4s;
+  cursor: pointer;
 }
 
 .number-box:hover {
   width: 150px;
   border: 2px solid #FFF;
+  box-shadow: 0 0 5px #FFF inset,
+              0 0 25px #FFF,
+              0 0 50px #FFF,
+              0 0 200px #FFF inset;
 }
 
-.number-box:hover div {
-  opacity: 1;
-}
+
 
 .next {
   position: absolute;
@@ -262,6 +274,16 @@ form, button {
   opacity: 0;
   transition: .5s;
   z-index: 2;
+}
+
+.number-box:hover span {
+  opacity: 1;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+}
+
+.number-box:hover .number {
+  color: #000;
 }
 
 
@@ -302,15 +324,16 @@ form p {
   border: 3px solid #FFF;
   width: 13em;
   transition: .6s;
+  cursor: pointer;
 
 }
 
 .colors:hover {
-  background: #ff005b;
-  box-shadow: 0 0 5px #03e9f4 inset,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 200px #03e9f4 inset;
+  background: #FFF;
+  box-shadow: 0 0 5px #FFF inset,
+              0 0 25px #FFF,
+              0 0 50px #FFF,
+              0 0 200px #FFF inset;
               
   border: none;
   color: #000;
@@ -419,13 +442,13 @@ button {
 }
 
 button:hover {
-  background: #03e9f4;
-  color:  #050801;
+  background: #FFF;
+  color: #000;
   font-weight: 900;
-  box-shadow: 0 0 5px #03e9f4 inset,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 200px #03e9f4 inset;
+  box-shadow: 0 0 5px #FFF inset,
+              0 0 25px #FFF,
+              0 0 50px #FFF,
+              0 0 200px #FFF inset;
   border: none;
 }
 

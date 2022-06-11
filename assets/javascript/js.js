@@ -7,6 +7,8 @@ const boton = document.querySelector('.boton');
 const descuento = document.querySelector('.descuento');
 const porcentaje = document.querySelector('.porcentaje');
 const escogido = document.querySelector('.escogido');
+const cantidad = document.querySelector('.cantidad');
+
 
 const colors = document.querySelector('.colors');
 const rojo = document.querySelector('.rojo');
@@ -25,7 +27,15 @@ const v = 'rgb(20, 223, 20)';
 
 const oferta = () => {
     let azar = Math.floor(Math.random() * 5 ) + 1;
-    porcentaje.textContent = `Tienes un ${azar * 10}% de descuento!`
+    porcentaje.textContent = `Tienes un ${azar * 10}% de descuento!`;
+    if(number.textContent > 1) {
+    cantidad.textContent = `${number.textContent} unidades
+    por: $${parseInt(799990 * number.textContent * (100 - azar * 10) / 100 ).toLocaleString('en-US')}`; 
+    } else {
+        cantidad.textContent = `Tu laptop
+        por: $${parseInt(799990 * (100 - azar * 10) / 100 ).toLocaleString('en-US')}`;
+
+    }
 
 };
 
@@ -33,6 +43,7 @@ next.addEventListener('click', () => {
     number.textContent ++;
     let sum = (number.textContent * 790990).toLocaleString('en-US');
     price.textContent = `Precio: $${sum}`;
+    return number.textContent;
 });
 
 previous.addEventListener('click', () => {
@@ -42,6 +53,7 @@ previous.addEventListener('click', () => {
         number.textContent --;
         let rest = (number.textContent * 790990).toLocaleString('en-US');
         price.textContent = `Precio: $${rest}`;
+        return number.textContent;
     }
    
 });

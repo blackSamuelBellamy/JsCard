@@ -301,6 +301,11 @@ form, button {
   
 }
 
+.escogido {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 
 
 form p {

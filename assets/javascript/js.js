@@ -29,8 +29,9 @@ const oferta = () => {
     let azar = Math.floor(Math.random() * 5 ) + 1;
     porcentaje.textContent = `Tienes un ${azar * 10}% de descuento!`;
     if(number.textContent > 1) {
-    cantidad.textContent = `${number.textContent} unidades
-    por: $${parseInt(799990 * number.textContent * (100 - azar * 10) / 100 ).toLocaleString('en-US')}`; 
+    cantidad.textContent = `${number.textContent} laptops
+    por: $${parseInt(799990 * number.textContent * (100 - azar * 10) / 100 ).toLocaleString('en-US')}`;
+    cantidad.style.fontSize = '1.4em'; 
     } else {
         cantidad.textContent = `Tu laptop
         por: $${parseInt(799990 * (100 - azar * 10) / 100 ).toLocaleString('en-US')}`;
@@ -85,6 +86,8 @@ rojo.addEventListener('click', () => {
     colors.style.color = '#FFF';
     colors.style.background = r;
     colors.style.boxShadow = 
+    '0 0 5px rgb(216, 32, 32), 0 0 25px rgb(216, 32, 32),0 0 50px rgb(216, 32, 32), 0 0 200px rgb(216, 32, 32)';
+    escogido.style.boxShadow = 
     '0 0 5px rgb(216, 32, 32), 0 0 25px rgb(216, 32, 32),0 0 50px rgb(216, 32, 32), 0 0 200px rgb(216, 32, 32)';   
 
 })
@@ -99,6 +102,8 @@ azul.addEventListener('click', () => {
     colors.style.color = '#FFF';
     colors.style.boxShadow =
     '0 0 5px rgb(8, 8, 167), 0 0 25px rgb(8, 8, 167), 0 0 50px rgb(8, 8, 167), 0 0 200px rgb(8, 8, 167)';
+    escogido.style.boxShadow =
+    '0 0 5px rgb(8, 8, 167), 0 0 25px rgb(8, 8, 167), 0 0 50px rgb(8, 8, 167), 0 0 200px rgb(8, 8, 167)';
 })
 
 negro.addEventListener('click', () => {
@@ -110,6 +115,8 @@ negro.addEventListener('click', () => {
     colors.style.background = n;
     colors.style.color = '#fff'; 
     colors.style.boxShadow =
+    '0 0 5px #000, 0 0 25px #000, 0 0 50px #000, 0 0 200px #000';
+    escogido.style.boxShadow =
     '0 0 5px #000, 0 0 25px #000, 0 0 50px #000, 0 0 200px #000';  
 })
     
@@ -123,6 +130,8 @@ amarillo.addEventListener('click', () => {
     colors.style.color = n;
     colors.style.boxShadow = 
     '0 0 5px rgb(236, 236, 30), 0 0 25px rgb(236, 236, 30), 0 0 50px rgb(236, 236, 30), 0 0 200px rgb(236, 236, 30)';  
+    escogido.style.boxShadow = 
+    '0 0 5px rgb(236, 236, 30), 0 0 25px rgb(236, 236, 30), 0 0 50px rgb(236, 236, 30), 0 0 200px rgb(236, 236, 30)';
 })
 
 
@@ -135,6 +144,8 @@ verde.addEventListener('click', () => {
     colors.style.background = v;
     colors.style.color = n;
     colors.style.boxShadow =
+    '0 0 5px rgb(20, 223, 20), 0 0 25px rgb(20, 223, 20), 0 0 50px rgb(20, 223, 20), 0 0 200px rgb(20, 223, 20)';
+    escogido.style.boxShadow =
     '0 0 5px rgb(20, 223, 20), 0 0 25px rgb(20, 223, 20), 0 0 50px rgb(20, 223, 20), 0 0 200px rgb(20, 223, 20)';
 })
 
